@@ -1,0 +1,6 @@
+<input type="text" bindinput="handleInput" />
+<button bindtap="handleTab" data-oper="{{1}}" >+</button>
+<button bindtap="handleTab" data-oper="{{-1}}">-</button>
+<view>  
+  {{num}}
+</view>
