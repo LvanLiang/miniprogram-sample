@@ -4,3 +4,7 @@
 <view>  
   {{num}}
 </view>
+
+<view>=============</view>
+
+<view class="view">这个是view</view>

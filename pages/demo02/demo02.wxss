@@ -1,1 +1,16 @@
-/* pages/demo02/demo02.wxss */
+/* 
+1 引入的 代码 是通过 @import 来引入
+2 路径 只能写相对路径
+ */
+ @import "../../styles/common.wxss";
+
+/* 
+    响应式⻓度单位  rpx(responsive pixel)
+    规定屏幕宽为 x 750rpx !如在iPhone6上，屏幕宽度为375x，则1rpx=0.5px
+ */
+.view {
+    width: 200rpx;
+    height: 200rpx;
+    background-color: #00ffff;
+}
+
