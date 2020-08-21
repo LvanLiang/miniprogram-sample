@@ -1,0 +1,56 @@
+
+<!-- 
+  image 图片标签
+  1 src 指定要加载的图片的路径
+    图片存在默认的宽度和高度 320 * 240      原图大小是 200 * 100
+  2 mode 决定 图片内容 如何 和 图片标签 宽高 做适配
+    1 scaleToFill 默认值 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素 
+    2 aspectFit 保持宽高比 确保图片的长边 显示出来   页面轮播图         常用
+    3 widthFix 以前web的图片的 宽度指定了之后 高度会自己按比例来调整   常用  
+    4 bottom。。 类似以前的backgroud-position 
+  3 小程序当中的图片 直接就支持 懒加载  lazy-load
+    1 lazy-load 会自己判断 当 图片 出现在 视口  上下 三屏的高度 之内的时候  自己开始加载图片 
+ -->
+<image mode="widthFix" src="https://s1.ax1x.com/2020/08/21/dYUW79.jpg"  class="img1"/>
+<view>----------------------------------</view>
+
+<!-- 轮播图 -->
+<swiper interval="1000" autoplay circular indicator-dots indicator-color="#0094ff">
+  <swiper-item><image mode="widthFix" src="//gw.alicdn.com/imgextra/i1/44/O1CN013zKZP11CCByG5bAeF_!!44-0-lubanu.jpg"/></swiper-item>
+  <swiper-item><image mode="widthFix" src="//aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg"    /></swiper-item>
+  <swiper-item><image mode="widthFix" src="//gw.alicdn.com/imgextra/i2/37/O1CN01syHZxs1C8zCFJj97b_!!37-0-lubanu.jpg"/></swiper-item>    
+</swiper>
+<view>----------------------------------</view>
+
+
+<!-- 
+  导航组件
+  0 块级元素 默认会换行  可以直接加宽度和高度 
+  1 url 要跳转的页面路径  绝对路径 相对路径
+  2 target 要跳转到当前的小程序 还是其他的小程序的页面
+    self 默认值 自己 小程序的页面 
+    miniProgram 其他的小程序的页面
+  3 open-type 跳转的方式
+    1 navigate 默认值 	保留当前页面，跳转到应用内的某个页面，但是不能跳到 tabbar 页面
+    2 redirect	关闭当前页面，跳转到应用内的某个页面，但是不允许跳转到 tabbar 页面。
+    3 switchTab	跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
+    4 reLaunch	关闭所有页面，打开到应用内的某个页面
+ -->
+ 
+<navigator url="/pages/demo02/demo02"> 轮播图页面 </navigator>
+<navigator url="/pages/index/index"> 直接跳转到 tabbar页面 </navigator>
+<navigator open-type="redirect" url="/pages/demo02/demo02">  轮播图页面 redirect </navigator>
+<navigator open-type="switchTab" url="/pages/index/index">  switchTab直接跳转到 tabbar页面 </navigator>
+<navigator open-type="reLaunch" url="/pages/index/index">  reLaunch 可以随便跳 </navigator> 
+<view>----------------------------------</view>
+
+
+ <!-- 
+  rich-text 富文本标签
+  1 nodes属性来实现
+    1 接收标签字符串 
+    2 接收对象数组 
+ -->
+ <rich-text nodes="{{html}}"></rich-text>
+  
+  
