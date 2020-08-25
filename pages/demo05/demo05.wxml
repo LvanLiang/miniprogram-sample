@@ -1,0 +1,35 @@
+<!-- 
+  小程序中的字体图标
+  1 type 图标的类型
+    success|success_no_circle|info|warn|waiting|cancel|download|search|clear
+  2 size 大小 
+  3 color 图标的颜色
+ -->
+<icon type="download" size="24" color="#62E884" /> 
+<view>----------------------------------</view>
+
+
+<radio-group bindchange="handleChange">
+    <radio value="female" color="red">女</radio>
+    <radio value="male" color="green">男</radio>
+</radio-group>
+
+<view>
+    你的选择是：{{gender}}
+</view>
+<view>----------------------------------</view>
+
+
+
+<view>
+    <checkbox-group bindchange="handleItemChange">        
+        <checkbox wx:for="{{fruitList}}" wx:key="id" value="{{item.value}}">
+            {{item.name}}
+        </checkbox>          
+    </checkbox-group>
+    <view>
+        你的选择是：{{checkFruitList}}
+    </view>
+      
+</view>
+  
