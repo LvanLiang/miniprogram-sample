@@ -6,4 +6,9 @@
     1 在子组件的标签上加入一个自定义事件
  -->
 
-<Tabs tabs="{{tabs}}" bind:itemChange="handleItemChange"></Tabs>
+<Tabs tabs="{{tabs}}" bind:itemChange="handleItemChange">
+   <block wx:if="{{tabs[0].isActive}}">0</block>
+   <block wx:elif="{{tabs[1].isActive}}">1</block>
+   <block wx:elif="{{tabs[2].isActive}}">2</block>
+   <block wx:else="{{tabs[3].isActive}}">3</block> 
+</Tabs>
